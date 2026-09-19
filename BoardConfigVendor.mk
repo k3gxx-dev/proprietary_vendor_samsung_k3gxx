@@ -12,5 +12,5 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Keep the legacy Samsung HALs in the Android 11 VNDK linker namespace.
-BOARD_VNDK_VERSION := current
+# Legacy Exynos 5422 HALs operate across vendor/platform boundary
+# BOARD_VNDK_VERSION := current
