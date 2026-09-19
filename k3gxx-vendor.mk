@@ -20,7 +20,6 @@ PRODUCT_PACKAGES += \
     camera.universal5422 \
     gps.universal5422 \
     gpsd \
-    gralloc.exynos5 \
     libGLES_mali \
     libexynoscamera \
     libfpasmtztransport \

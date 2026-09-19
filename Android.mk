@@ -77,7 +77,8 @@ $(eval $(call k3gxx-shared-library,libvcsfp,proprietary/lib/libvcsfp.so,))
 $(eval $(call k3gxx-shared-library,libvfmClient,proprietary/lib/libvfmClient.so,))
 $(eval $(call k3gxx-shared-library,libvfmtztransport,proprietary/lib/libvfmtztransport.so,))
 $(eval $(call k3gxx-shared-library,libGLES_mali,proprietary/vendor/lib/egl/libGLES_mali.so,egl))
-$(eval $(call k3gxx-shared-library,gralloc.exynos5,proprietary/vendor/lib/hw/gralloc.exynos5.so,hw))
+# gralloc.exynos5 is compiled from source in hardware/samsung_slsi/exynos/gralloc
+# $(eval $(call k3gxx-shared-library,gralloc.exynos5,proprietary/vendor/lib/hw/gralloc.exynos5.so,hw))
 $(eval $(call k3gxx-shared-library,libwvdrmengine,proprietary/vendor/lib/mediadrm/libwvdrmengine.so,mediadrm))
 
 # Modem, GPS, sensors, fingerprint and secure-world daemons.
