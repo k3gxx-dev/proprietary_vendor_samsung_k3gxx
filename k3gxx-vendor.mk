@@ -21,15 +21,7 @@ PRODUCT_PACKAGES += \
     gps.universal5422 \
     gpsd \
     gralloc.exynos5 \
-    libExynosOMX_Core \
-    libExynosOMX_Resourcemanager \
     libGLES_mali \
-    libOMX.Exynos.AVC.Decoder \
-    libOMX.Exynos.AVC.Encoder \
-    libOMX.Exynos.MPEG4.Decoder \
-    libOMX.Exynos.MPEG4.Encoder \
-    libOMX.Exynos.VP8.Decoder \
-    libOMX.Exynos.VP8.Encoder \
     libexynoscamera \
     libfpasmtztransport \
     libsec-ril \

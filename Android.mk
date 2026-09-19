@@ -48,14 +48,15 @@ include $(BUILD_PREBUILT)
 endef
 
 # Audio, camera, GPS, RIL, sensor, NFC, fingerprint, media and graphics HALs.
-$(eval $(call k3gxx-shared-library,libExynosOMX_Core,proprietary/lib/libExynosOMX_Core.so,))
-$(eval $(call k3gxx-shared-library,libExynosOMX_Resourcemanager,proprietary/lib/libExynosOMX_Resourcemanager.so,))
-$(eval $(call k3gxx-shared-library,libOMX.Exynos.AVC.Decoder,proprietary/lib/omx/libOMX.Exynos.AVC.Decoder.so,omx))
-$(eval $(call k3gxx-shared-library,libOMX.Exynos.AVC.Encoder,proprietary/lib/omx/libOMX.Exynos.AVC.Encoder.so,omx))
-$(eval $(call k3gxx-shared-library,libOMX.Exynos.MPEG4.Decoder,proprietary/lib/omx/libOMX.Exynos.MPEG4.Decoder.so,omx))
-$(eval $(call k3gxx-shared-library,libOMX.Exynos.MPEG4.Encoder,proprietary/lib/omx/libOMX.Exynos.MPEG4.Encoder.so,omx))
-$(eval $(call k3gxx-shared-library,libOMX.Exynos.VP8.Decoder,proprietary/lib/omx/libOMX.Exynos.VP8.Decoder.so,omx))
-$(eval $(call k3gxx-shared-library,libOMX.Exynos.VP8.Encoder,proprietary/lib/omx/libOMX.Exynos.VP8.Encoder.so,omx))
+# OpenMAX video codecs are compiled from source in hardware/samsung_slsi/openmax
+# $(eval $(call k3gxx-shared-library,libExynosOMX_Core,proprietary/lib/libExynosOMX_Core.so,))
+# $(eval $(call k3gxx-shared-library,libExynosOMX_Resourcemanager,proprietary/lib/libExynosOMX_Resourcemanager.so,))
+# $(eval $(call k3gxx-shared-library,libOMX.Exynos.AVC.Decoder,proprietary/lib/omx/libOMX.Exynos.AVC.Decoder.so,omx))
+# $(eval $(call k3gxx-shared-library,libOMX.Exynos.AVC.Encoder,proprietary/lib/omx/libOMX.Exynos.AVC.Encoder.so,omx))
+# $(eval $(call k3gxx-shared-library,libOMX.Exynos.MPEG4.Decoder,proprietary/lib/omx/libOMX.Exynos.MPEG4.Decoder.so,omx))
+# $(eval $(call k3gxx-shared-library,libOMX.Exynos.MPEG4.Encoder,proprietary/lib/omx/libOMX.Exynos.MPEG4.Encoder.so,omx))
+# $(eval $(call k3gxx-shared-library,libOMX.Exynos.VP8.Decoder,proprietary/lib/omx/libOMX.Exynos.VP8.Decoder.so,omx))
+# $(eval $(call k3gxx-shared-library,libOMX.Exynos.VP8.Encoder,proprietary/lib/omx/libOMX.Exynos.VP8.Encoder.so,omx))
 $(eval $(call k3gxx-shared-library,camera.universal5422,proprietary/lib/hw/camera.universal5422.so,hw))
 $(eval $(call k3gxx-shared-library,libexynoscamera,proprietary/lib/libexynoscamera.so,))
 $(eval $(call k3gxx-shared-library,libsecnativefeature,proprietary/lib/libsecnativefeature.so,))
