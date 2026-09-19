@@ -32,7 +32,6 @@ PRODUCT_PACKAGES += \
     libOMX.Exynos.VP8.Encoder \
     libexynoscamera \
     libfpasmtztransport \
-    libhwjpeg \
     libsec-ril \
     libsecnativefeature \
     libsensorhub \
@@ -44,7 +43,6 @@ PRODUCT_PACKAGES += \
     libvfmtztransport \
     libwvdrmengine \
     libwrappergps \
-    mcDriverDaemon \
     nfc_nci.universal5422 \
     sensorhubservice \
     sensorhubs.universal5422 \

@@ -60,7 +60,8 @@ $(eval $(call k3gxx-shared-library,camera.universal5422,proprietary/lib/hw/camer
 $(eval $(call k3gxx-shared-library,libexynoscamera,proprietary/lib/libexynoscamera.so,))
 $(eval $(call k3gxx-shared-library,libsecnativefeature,proprietary/lib/libsecnativefeature.so,))
 $(eval $(call k3gxx-shared-library,libvdis,proprietary/lib/libvdis.so,))
-$(eval $(call k3gxx-shared-library,libhwjpeg,proprietary/lib/libhwjpeg.so,))
+# libhwjpeg is compiled from source in hardware/samsung_slsi/exynos5420/libhwjpeg
+# $(eval $(call k3gxx-shared-library,libhwjpeg,proprietary/lib/libhwjpeg.so,))
 $(eval $(call k3gxx-shared-library,libsensorhub,proprietary/lib/libsensorhub.so,))
 $(eval $(call k3gxx-shared-library,libsensorhubservice,proprietary/lib/libsensorhubservice.so,))
 $(eval $(call k3gxx-shared-library,sensorhubs.universal5422,proprietary/lib/hw/sensorhubs.universal5422.so,hw))
@@ -82,5 +83,6 @@ $(eval $(call k3gxx-shared-library,libwvdrmengine,proprietary/vendor/lib/mediadr
 $(eval $(call k3gxx-executable,cbd,proprietary/bin/cbd))
 $(eval $(call k3gxx-executable,gpsd,proprietary/bin/gpsd))
 $(eval $(call k3gxx-executable,sensorhubservice,proprietary/bin/sensorhubservice))
-$(eval $(call k3gxx-executable,mcDriverDaemon,proprietary/bin/mcDriverDaemon))
+# mcDriverDaemon is compiled from source in hardware/samsung_slsi/exynos5420/mobicore
+# $(eval $(call k3gxx-executable,mcDriverDaemon,proprietary/bin/mcDriverDaemon))
 $(eval $(call k3gxx-executable,vcsFPService,proprietary/bin/vcsFPService))
