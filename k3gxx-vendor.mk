@@ -41,3 +41,8 @@ PRODUCT_PACKAGES += \
     vcsFPService
 
 $(call inherit-product, vendor/samsung/k3gxx/k3gxx-vendor-blobs.mk)
+
+# Modular blobs from submodules
+-include vendor/samsung/k3gxx/camera/camera-blobs.mk
+-include vendor/samsung/k3gxx/omx/omx-blobs.mk
+-include vendor/samsung/k3gxx/sensors-biometrics/sensors-blobs.mk

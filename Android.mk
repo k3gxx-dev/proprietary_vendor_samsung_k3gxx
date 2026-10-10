@@ -47,44 +47,13 @@ LOCAL_CHECK_ELF_FILES := false
 include $(BUILD_PREBUILT)
 endef
 
-# Audio, camera, GPS, RIL, sensor, NFC, fingerprint, media and graphics HALs.
-# OpenMAX video codecs are compiled from source in hardware/samsung_slsi/openmax
-# $(eval $(call k3gxx-shared-library,libExynosOMX_Core,proprietary/lib/libExynosOMX_Core.so,))
-# $(eval $(call k3gxx-shared-library,libExynosOMX_Resourcemanager,proprietary/lib/libExynosOMX_Resourcemanager.so,))
-# $(eval $(call k3gxx-shared-library,libOMX.Exynos.AVC.Decoder,proprietary/lib/omx/libOMX.Exynos.AVC.Decoder.so,omx))
-# $(eval $(call k3gxx-shared-library,libOMX.Exynos.AVC.Encoder,proprietary/lib/omx/libOMX.Exynos.AVC.Encoder.so,omx))
-# $(eval $(call k3gxx-shared-library,libOMX.Exynos.MPEG4.Decoder,proprietary/lib/omx/libOMX.Exynos.MPEG4.Decoder.so,omx))
-# $(eval $(call k3gxx-shared-library,libOMX.Exynos.MPEG4.Encoder,proprietary/lib/omx/libOMX.Exynos.MPEG4.Encoder.so,omx))
-# $(eval $(call k3gxx-shared-library,libOMX.Exynos.VP8.Decoder,proprietary/lib/omx/libOMX.Exynos.VP8.Decoder.so,omx))
-# $(eval $(call k3gxx-shared-library,libOMX.Exynos.VP8.Encoder,proprietary/lib/omx/libOMX.Exynos.VP8.Encoder.so,omx))
-$(eval $(call k3gxx-shared-library,camera.universal5422,proprietary/lib/hw/camera.universal5422.so,hw))
-$(eval $(call k3gxx-shared-library,libexynoscamera,proprietary/lib/libexynoscamera.so,))
-$(eval $(call k3gxx-shared-library,libsecnativefeature,proprietary/lib/libsecnativefeature.so,))
-$(eval $(call k3gxx-shared-library,libvdis,proprietary/lib/libvdis.so,))
-# libhwjpeg is compiled from source in hardware/samsung_slsi/exynos5420/libhwjpeg
-# $(eval $(call k3gxx-shared-library,libhwjpeg,proprietary/lib/libhwjpeg.so,))
-$(eval $(call k3gxx-shared-library,libsensorhub,proprietary/lib/libsensorhub.so,))
-$(eval $(call k3gxx-shared-library,libsensorhubservice,proprietary/lib/libsensorhubservice.so,))
-$(eval $(call k3gxx-shared-library,sensorhubs.universal5422,proprietary/lib/hw/sensorhubs.universal5422.so,hw))
-$(eval $(call k3gxx-shared-library,sensors.universal5422,proprietary/lib/hw/sensors.universal5422.so,hw))
+# GPS, NFC, and Widevine modules managed directly by the root vendor repo
 $(eval $(call k3gxx-shared-library,gps.universal5422,proprietary/lib/hw/gps.universal5422.so,hw))
 $(eval $(call k3gxx-shared-library,libwrappergps,proprietary/lib/libwrappergps.so,))
-$(eval $(call k3gxx-shared-library,libsec-ril,proprietary/lib/libsec-ril.so,))
 $(eval $(call k3gxx-shared-library,nfc_nci.universal5422,proprietary/lib/hw/nfc_nci.universal5422.so,hw))
-$(eval $(call k3gxx-shared-library,libfpasmtztransport,proprietary/lib/libfpasmtztransport.so,))
-$(eval $(call k3gxx-shared-library,libvalAuth,proprietary/lib/libvalAuth.so,))
-$(eval $(call k3gxx-shared-library,libvcsfp,proprietary/lib/libvcsfp.so,))
-$(eval $(call k3gxx-shared-library,libvfmClient,proprietary/lib/libvfmClient.so,))
-$(eval $(call k3gxx-shared-library,libvfmtztransport,proprietary/lib/libvfmtztransport.so,))
-$(eval $(call k3gxx-shared-library,libGLES_mali,proprietary/vendor/lib/egl/libGLES_mali.so,egl))
-# gralloc.exynos5 is compiled from source in hardware/samsung_slsi/exynos/gralloc
-# $(eval $(call k3gxx-shared-library,gralloc.exynos5,proprietary/vendor/lib/hw/gralloc.exynos5.so,hw))
 $(eval $(call k3gxx-shared-library,libwvdrmengine,proprietary/vendor/lib/mediadrm/libwvdrmengine.so,mediadrm))
-
-# Modem, GPS, sensors, fingerprint and secure-world daemons.
-$(eval $(call k3gxx-executable,cbd,proprietary/bin/cbd))
 $(eval $(call k3gxx-executable,gpsd,proprietary/bin/gpsd))
-$(eval $(call k3gxx-executable,sensorhubservice,proprietary/bin/sensorhubservice))
-# mcDriverDaemon is compiled from source in hardware/samsung_slsi/exynos5420/mobicore
-# $(eval $(call k3gxx-executable,mcDriverDaemon,proprietary/bin/mcDriverDaemon))
-$(eval $(call k3gxx-executable,vcsFPService,proprietary/bin/vcsFPService))
+
+# Include all modular submodules:
+# camera, gpu, ril, omx, sensors-biometrics
+include $(call all-subdir-makefiles)

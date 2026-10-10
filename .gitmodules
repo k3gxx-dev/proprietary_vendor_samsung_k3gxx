@@ -1,0 +1,20 @@
+[submodule "camera"]
+	path = camera
+	url = https://github.com/k3gxx-dev/proprietary_vendor_samsung_k3gxx-camera.git
+	branch = lineage-18.1
+[submodule "gpu"]
+	path = gpu
+	url = https://github.com/k3gxx-dev/proprietary_vendor_samsung_k3gxx-gpu.git
+	branch = lineage-18.1
+[submodule "ril"]
+	path = ril
+	url = https://github.com/k3gxx-dev/proprietary_vendor_samsung_k3gxx-ril.git
+	branch = lineage-18.1
+[submodule "omx"]
+	path = omx
+	url = https://github.com/k3gxx-dev/proprietary_vendor_samsung_k3gxx-omx.git
+	branch = lineage-18.1
+[submodule "sensors-biometrics"]
+	path = sensors-biometrics
+	url = https://github.com/k3gxx-dev/proprietary_vendor_samsung_k3gxx-sensors-biometrics.git
+	branch = lineage-18.1

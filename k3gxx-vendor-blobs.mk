@@ -19,19 +19,21 @@ K3GXX_VENDOR_OUT := $(TARGET_COPY_OUT_VENDOR)
 PRODUCT_COPY_FILES += \
     $(K3GXX_VENDOR_PATH)/proprietary/vendor/firmware/bcm4350_V0375.0766_wisol.hcd:$(K3GXX_VENDOR_OUT)/firmware/bcm4350_V0375.0766_wisol.hcd \
     $(K3GXX_VENDOR_PATH)/proprietary/vendor/firmware/bcm4350_V0375.0768.hcd:$(K3GXX_VENDOR_OUT)/firmware/bcm4350_V0375.0768.hcd \
-    $(K3GXX_VENDOR_PATH)/proprietary/vendor/firmware/companion_2p2_master_setfile.bin:$(K3GXX_VENDOR_OUT)/firmware/companion_2p2_master_setfile.bin \
-    $(K3GXX_VENDOR_PATH)/proprietary/vendor/firmware/companion_2p2_mode_setfile.bin:$(K3GXX_VENDOR_OUT)/firmware/companion_2p2_mode_setfile.bin \
-    $(K3GXX_VENDOR_PATH)/proprietary/vendor/firmware/companion_default_coef.bin:$(K3GXX_VENDOR_OUT)/firmware/companion_default_coef.bin \
-    $(K3GXX_VENDOR_PATH)/proprietary/vendor/firmware/companion_default_lsc.bin:$(K3GXX_VENDOR_OUT)/firmware/companion_default_lsc.bin \
-    $(K3GXX_VENDOR_PATH)/proprietary/vendor/firmware/companion_fw_2p2_evt1.bin:$(K3GXX_VENDOR_OUT)/firmware/companion_fw_2p2_evt1.bin \
-    $(K3GXX_VENDOR_PATH)/proprietary/vendor/firmware/companion_fw_evt0.bin:$(K3GXX_VENDOR_OUT)/firmware/companion_fw_evt0.bin \
-    $(K3GXX_VENDOR_PATH)/proprietary/vendor/firmware/fimc_is_fw2.bin:$(K3GXX_VENDOR_OUT)/firmware/fimc_is_fw2.bin \
-    $(K3GXX_VENDOR_PATH)/proprietary/vendor/firmware/fimc_is_fw2_2p2.bin:$(K3GXX_VENDOR_OUT)/firmware/fimc_is_fw2_2p2.bin \
+# Camera firmwares (now provided by vendor/samsung/k3gxx/camera/camera-blobs.mk)
+#    $(K3GXX_VENDOR_PATH)/proprietary/vendor/firmware/companion_2p2_master_setfile.bin:$(K3GXX_VENDOR_OUT)/firmware/companion_2p2_master_setfile.bin \
+#    $(K3GXX_VENDOR_PATH)/proprietary/vendor/firmware/companion_2p2_mode_setfile.bin:$(K3GXX_VENDOR_OUT)/firmware/companion_2p2_mode_setfile.bin \
+#    $(K3GXX_VENDOR_PATH)/proprietary/vendor/firmware/companion_default_coef.bin:$(K3GXX_VENDOR_OUT)/firmware/companion_default_coef.bin \
+#    $(K3GXX_VENDOR_PATH)/proprietary/vendor/firmware/companion_default_lsc.bin:$(K3GXX_VENDOR_OUT)/firmware/companion_default_lsc.bin \
+#    $(K3GXX_VENDOR_PATH)/proprietary/vendor/firmware/companion_fw_2p2_evt1.bin:$(K3GXX_VENDOR_OUT)/firmware/companion_fw_2p2_evt1.bin \
+#    $(K3GXX_VENDOR_PATH)/proprietary/vendor/firmware/companion_fw_evt0.bin:$(K3GXX_VENDOR_OUT)/firmware/companion_fw_evt0.bin \
+#    $(K3GXX_VENDOR_PATH)/proprietary/vendor/firmware/fimc_is_fw2.bin:$(K3GXX_VENDOR_OUT)/firmware/fimc_is_fw2.bin \
+#    $(K3GXX_VENDOR_PATH)/proprietary/vendor/firmware/fimc_is_fw2_2p2.bin:$(K3GXX_VENDOR_OUT)/firmware/fimc_is_fw2_2p2.bin \
     $(K3GXX_VENDOR_PATH)/proprietary/vendor/firmware/libpn547_fw.so:$(K3GXX_VENDOR_OUT)/firmware/libpn547_fw.so \
-    $(K3GXX_VENDOR_PATH)/proprietary/vendor/firmware/mfc_fw.bin:$(K3GXX_VENDOR_OUT)/firmware/mfc_fw.bin \
-    $(K3GXX_VENDOR_PATH)/proprietary/vendor/firmware/setfile_2p2.bin:$(K3GXX_VENDOR_OUT)/firmware/setfile_2p2.bin \
-    $(K3GXX_VENDOR_PATH)/proprietary/vendor/firmware/setfile_6b2.bin:$(K3GXX_VENDOR_OUT)/firmware/setfile_6b2.bin \
-    $(K3GXX_VENDOR_PATH)/proprietary/vendor/firmware/setfile_8b1.bin:$(K3GXX_VENDOR_OUT)/firmware/setfile_8b1.bin
+# MFC firmware (now provided by vendor/samsung/k3gxx/omx/omx-blobs.mk)
+#    $(K3GXX_VENDOR_PATH)/proprietary/vendor/firmware/mfc_fw.bin:$(K3GXX_VENDOR_OUT)/firmware/mfc_fw.bin \
+#    $(K3GXX_VENDOR_PATH)/proprietary/vendor/firmware/setfile_2p2.bin:$(K3GXX_VENDOR_OUT)/firmware/setfile_2p2.bin \
+#    $(K3GXX_VENDOR_PATH)/proprietary/vendor/firmware/setfile_6b2.bin:$(K3GXX_VENDOR_OUT)/firmware/setfile_6b2.bin \
+#    $(K3GXX_VENDOR_PATH)/proprietary/vendor/firmware/setfile_8b1.bin:$(K3GXX_VENDOR_OUT)/firmware/setfile_8b1.bin
 
 # WM5110 (Florida codec) audio firmware.
 PRODUCT_COPY_FILES += \
